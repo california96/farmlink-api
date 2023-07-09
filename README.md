@@ -28,6 +28,10 @@ Groovy
 
   https://groovy.apache.org/download.html
 
+Docker 
+
+  https://www.docker.com/ (note: ensure that Virtualization is enabled in your BIOS. Check accordingly)
+
 Cloning the Project using IntelliJ
 
 1. File > New Project > Project from Version Control > Git
@@ -41,4 +45,13 @@ Cloning the Project using IntelliJ
 4. Run FarmlinkApiApplicationGroovy
 
 5. Go to http://localhost:8080/health
+
+To run via Docker
+
+1. ./gradlew build
+
+2. Run these commands via terminal (replace imageName and tag accordingly)
+
+`docker build -t ${imageName}:${tag} . `
+`docker run -p 8080:8080 ${imageName}:${tag} `
 
