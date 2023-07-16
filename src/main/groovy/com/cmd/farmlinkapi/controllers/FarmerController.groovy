@@ -4,6 +4,8 @@ import com.cmd.farmlinkapi.models.Farmer
 import com.cmd.farmlinkapi.services.FarmerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
@@ -18,5 +20,10 @@ class FarmerController {
     @GetMapping("/farmer")
     Farmer getFarmer(@RequestParam String name) throws InterruptedException, ExecutionException{
         return farmerService.getFarmerbyName(name)
+    }
+
+    @PostMapping("/farmer/save")
+    String saveFarmer(@RequestBody Farmer farmer) throws InterruptedException, ExecutionException{
+        return farmerService.saveFarmer(farmer)
     }
 }
