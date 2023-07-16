@@ -16,4 +16,52 @@ class Farmer {
         this.contactInfo = contactInfo
         this.products = products
     }
+
+    private int getId() {
+        return id
+    }
+
+    void setId(int id) {
+        this.id = id
+    }
+
+    private String getName() {
+        return name
+    }
+
+    void setName(String name) {
+        this.name = name
+    }
+
+    private String getLocation() {
+        return location
+    }
+
+    void setLocation(String location) {
+        this.location = location
+    }
+
+    private String getFarmerId() {
+        return farmerId
+    }
+
+    void setFarmerId(String farmerId) {
+        this.farmerId = farmerId
+    }
+
+    private String getContactInfo() {
+        return contactInfo
+    }
+
+    void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo
+    }
+
+    private ArrayList<Product> getProducts() {
+        return products
+    }
+
+    void setProducts(ArrayList<Product> products) {
+        this.products = products
+    }
 }
