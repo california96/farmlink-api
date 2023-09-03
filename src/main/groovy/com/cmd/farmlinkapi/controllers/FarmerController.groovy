@@ -2,6 +2,7 @@ package com.cmd.farmlinkapi.controllers
 
 import com.cmd.farmlinkapi.models.Farmer
 import com.cmd.farmlinkapi.services.FarmerService
+import org.apache.coyote.Request
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -30,8 +31,8 @@ class FarmerController {
     }
 
     @PutMapping("/farmer/update")
-    String updateFarmer(@RequestBody Farmer farmer, @RequestParam String name) throws InterruptedException, ExecutionException{
-        return farmerService.updateFarmer(farmer, name)
+    String updateFarmer(@RequestParam String farmerId, @RequestBody Farmer farmer) throws InterruptedException, ExecutionException{
+        return farmerService.updateFarmer(farmerId, farmer)
     }
 
     @DeleteMapping("/farmer/delete")
