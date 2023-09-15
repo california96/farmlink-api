@@ -20,11 +20,11 @@ IntelliJ IDEA (Community Version will do)
 
   https://www.jetbrains.com/idea/download
 
-Gradle
+Gradle 8.1
 
   https://gradle.org/releases/
 
-Groovy
+Groovy 4.0.2
 
   https://groovy.apache.org/download.html
 
@@ -38,17 +38,19 @@ Cloning the Project using IntelliJ
 
 2. Get URL from Github Repo
 
-3. Run build.gradle
+3. Run build.gradle (do this step if you're running via Docker otherwise, proceed to step 4)
 
   gradle clean build
 
-4. Run FarmlinkApiApplicationGroovy
+4. Run FarmlinkApiApplicationGroovy (this is assuming that your IntelliJ has the Spring plugins ready)
 
-5. Go to http://localhost:8080/health
+5. Go to http://localhost:8080 and expect a JSON message
+
+6. Use http://localhost:8080/health as a health check
 
 To run via Docker
 
-1. ./gradlew build
+1. gradle clean build
 
 2. Run these commands via terminal (replace imageName and tag accordingly)
 
